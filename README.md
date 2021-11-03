@@ -10,22 +10,21 @@ This is the main marketing website for Code Institute. It is designed to be resp
 
 -   ### User stories
 
-    -   #### First Time Visitor Goals
+	- Upon opening the website non-registered users will be prompted with a register window.
+	- The user will have 3 different account types:
+		- Viewer:
+			- A Viewer will be the most basic account. They shall be able to view and engage with posts (comment, like or dislike).
+		- Poster: 
+			- Upon reaching certain milestones like 50 likes/dislikes and at least 2 comments on different posts a week, a Viewer shall be able to apply to be a Poster on the forum. In addition to the perks a Viewer has, a Poster will be able to create their own posts, providing a source (to add credibility) and they MUST follow community guidelines. They will be able to delete their OWN posts and can update their OWN posts pending a moderators approval.
+		-Moderator:
+			- After 30 posts with at least 1500 likes a Poster will be invited to join the community as a Forum Moderator, they will be given an admin role within the website and their purpose will be to make sure all posts and consequent comment sections have nothing against community guidelines. They will be in charge of viewing the applications for Poster and Moderator and will also make sure that all post updates are withing community guidelines.
 
-        1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about how I can become a regular poster myself.
-        2. As a First Time Visitor, I want to be able to easily get to what news I tend to like most.
-        3. As a First Time Visitor, I want to easily access the account creation page.
+	- All users will be invited to join a community chat room to further engage with each other. (Discord channel)
+	- All users will be able to select favorite categories to ensure they view what posts interests them most, first.
+	- All users will be able to give back feedback directly to the developer.
+	
+	- Posters will have notifications regarding community feedback on their posts.
 
-    -   #### Returning Visitor Goals
-
-        1. As a Returning Visitor, I want to see what posts I've recently viewed.
-        2. As a Returning Visitor, I want to easily give feedback to the developers of the website.
-        3. As a Returning Visitor, I want to find community forums where I can engage with the community. (Discord channel)
-
-    -   #### Frequent User Goals
-		1. As a Frequent User, I want to be able to post and edit MY older posts.
-        2. As a Frequent User, I want to have notifications on how my recent posts have been doing.
-        3. As a Frequent User, I want to have an option to apply for website moderator.
 
 -   ### Design
     -   #### Colour Scheme
