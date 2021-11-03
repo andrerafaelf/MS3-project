@@ -36,11 +36,11 @@ This is the main marketing website for Code Institute. It is designed to be resp
 
 *   ### Wireframes
 
-    -   Home Page Wireframe - [View](assets/wireframes/pcWF.png)
+    -   Desktop Wireframe - [View](assets/wireframes/pcWF.png)
 
-    -   Mobile Wireframe - [View](https://github.com/)
+    -   Mobile Wireframe - [View](assets/wireframes/mobile.png)
 
-    -   Contact Us Page Wireframe - [View](https://github.com/)
+    -   Tablet Wireframe - [View](assets/wireframes/tablet.png)
 
 ## Features
 
