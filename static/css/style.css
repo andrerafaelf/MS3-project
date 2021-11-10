@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.logo-font {
+    font-family: 'Great Vibes', cursive;
+}
+
+.text-shadow {
+    text-shadow: 4px 4px 4px rgba(120, 120, 120, 0.4);
+}
