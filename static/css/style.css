@@ -7,3 +7,7 @@
 .text-shadow {
     text-shadow: 4px 4px 4px rgba(120, 120, 120, 0.4);
 }
+
+.flashes h4 {
+    line-height: 2;
+}
