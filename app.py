@@ -99,7 +99,8 @@ def logout():
 
 @app.route("/create_post")
 def create_post():
-    return render_template("create_post.html")
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("create_post.html", categories=categories)
 
 
 if __name__ == "__main__":

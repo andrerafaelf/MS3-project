@@ -23,6 +23,18 @@
         </div>
         <div class="row">
             <div class="input-field col s12">
+                <i class="fas fa-folder-open prefix"></i>
+                <select id="category_name" name="category_name" class="validate" required>
+                    <option value="" disabled selected>Choose Category</option>
+                    {% for category in categories %}
+                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    {% endfor %}
+                </select>
+                <label for="category_name">Task Category</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
                 <div class="switch">
                     <i class="fas fa-exclamation-triangle prefix"></i>
                     <label for="is_sfw">
