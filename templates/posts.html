@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h3 class="center-align">Recent Posts</h3>
+
     <div class="col s12 m7">
         {% for post in posts %}
-        <h2 class="header center">{{ post.post_name }} {% if post.is_sfw == "no" %}
+        <h4 class="header center"><u>{{ post.post_name }}</u> {% if post.is_sfw == "no" %}
             <i class="fas fa-exclamation-triangle tooltipped"
                 data-position="right" data-tooltip="NSFW"></i>
-        {% endif %}  </h2>       
+        {% endif %}  </h4>       
         <div class="card horizontal">
           <div class="card-image">
             <img src="https://lorempixel.com/100/190/nature/6">
@@ -16,8 +18,9 @@
               <p>{{ post.user_opinion }}</p>
             </div>
             <div class="card-action">
-              <a href="{{ post.post_source }}">Source</a>
               <p>Category: {{ post.category_name }}</p> 
+              <a href="{{ post.post_source }}">Source</a>
+              <p><em>by: {{ post.created_by }}</em></p>
             </div>
           </div>
         </div>

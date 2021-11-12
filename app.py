@@ -97,8 +97,21 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/create_post")
+@app.route("/create_post", methods=["GET", "POST"])
 def create_post():
+    if request.method == "POST":
+        is_sfw = "on" if request.form.get("is_sfw") else "off"
+        post = {
+            "category_name": request.form.get("category_name"),
+            "post_name": request.form.get("post_name"),
+            "user_opinion": request.form.get("user_opinion"),
+            "is_sfw": is_sfw,
+            "created_by": session["user"]
+        }
+        mongo.db.posts.insert_one(post)
+        flash("Post Successfully Created")
+        return redirect(url_for("get_posts"))
+
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("create_post.html", categories=categories)
 
