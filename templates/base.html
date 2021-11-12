@@ -24,7 +24,7 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_posts') }}" class="black-text">Home</a></li>
                     {% if session.user %}
-                        <li><a href="#" class="black-text">Create Post</a></li>
+                        <li><a href="{{ url_for('create_post') }}" class="black-text">Create Post</a></li>
                         <li><a href="{{ url_for('profile', username=session['user']) }}" class="black-text">Profile</a></li>
                         <li><a href="{{ url_for('logout') }}" class="black-text">Log Out</a></li>
                     {% else %}
@@ -39,7 +39,7 @@
         <ul class="sidenav" id="mobile-demo">
             <li><a href="{{ url_for('get_posts') }}" class="black-text">Home</a></li>
             {% if session.user %}
-                <li><a href="#" class="black-text">Create Post</a></li>
+                <li><a href="{{ url_for('create_post') }}" class="black-text">Create Post</a></li>
                 <li><a href="{{ url_for('logout') }}" class="black-text">Log Out</a></li>
                 <li><a href="{{ url_for('profile', username=session['user']) }}" class="black-text">Profile</a></li>
             {% else %}
