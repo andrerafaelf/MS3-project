@@ -5,7 +5,7 @@
 
     <div class="col s12 m7">
         {% for post in posts %}
-        <h4 class="header center"><u>{{ post.post_name }}</u> {% if post.is_sfw == "no" %}
+        <h4 class="header center"><u>{{ post.post_name }}<u></u> {% if post.is_sfw == "no" %}
             <i class="fas fa-exclamation-triangle tooltipped"
                 data-position="right" data-tooltip="NSFW"></i>
         {% endif %}  </h4>       
@@ -21,6 +21,8 @@
               <p>Category: {{ post.category_name }}</p> 
               <a href="{{ post.post_source }}">Source</a>
               <p><em>by: {{ post.created_by }}</em></p>
+              <a href="" class="btn-small light-blue lighten-1">Edit</a>
+              <a href="" class="btn-small red accent-4">Delete</a>
             </div>
           </div>
         </div>
