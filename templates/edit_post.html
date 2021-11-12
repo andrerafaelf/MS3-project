@@ -9,7 +9,7 @@
             <div class="input-field col s12">
                 <i class="fas fa-pencil-alt prefix"></i>
                 <input id="post_name" name="post_name" minlength="5" maxlength="50"
-                    type="text" class="validate" required>
+                    value="{{ post.post_name }}" type="text" class="validate" required>
                 <label for="post_name">Post Title</label>
             </div>
         </div>
@@ -17,7 +17,9 @@
             <div class="input-field col s12">
                 <i class="fas fa-align-left prefix"></i>
                 <textarea id="user_opinion" name="user_opinion" minlength="5"
-                    maxlength="200" class="materialize-textarea validate"></textarea>
+                    maxlength="200" class="materialize-textarea validate">
+                {{- post.user_opinion -}}
+                </textarea>
                 <label for="user_opinion">Additional comments</label>
             </div>
         </div>
@@ -25,10 +27,14 @@
             <div class="input-field col s12">
                 <i class="fas fa-folder-open prefix"></i>
                 <select id="category_name" name="category_name" class="validate" required>
-                    <option value="" disabled selected>Choose Category</option>
+                    <option value="" disabled>Choose Category</option>
                     {% for category in categories %}
-                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                    {% endfor %}
+                            {% if category.category_name == post.category_name %}
+                                <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                            {% else %}
+                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            {% endif %}
+                        {% endfor %}
                 </select>
                 <label for="category_name">Post Category</label>
             </div>
@@ -37,7 +43,7 @@
             <div class="input-field col s12">
                 <i class="fas fa-anchor prefix"></i>
                 <input id="post_source" name="post_source" minlength="5"
-                    type="text" class="validate" required>
+                value="{{ post.post_source }}" type="text" class="validate" required>
                 <label for="post_source">Post Source Link</label>
             </div>
         </div>
@@ -46,7 +52,11 @@
                 <div class="switch">
                     <i class="fas fa-exclamation-triangle prefix"></i>
                     <label for="is_sfw">
+                        {% if post.is_sfw == "on" %}
+                        <input type="checkbox" id="is_sfw" name="is_sfw" checked>
+                        {% else %}
                         <input type="checkbox" id="is_sfw" name="is_sfw">
+                        {% endif %}
                         <span class="lever"></span>
                         Is Safe For Work
                     </label>
@@ -55,6 +65,9 @@
         </div>
         <div class="row">
             <div class="col s12 center-align">
+                <a href="{{ url_for('get_posts') }}" class="btn-large red text-shadow">
+                    Cancel <i class="fas fa-times-circle right"></i>
+                </a>
                 <button type="submit" class="btn-large black grey darken-4 text-shadow">
                     Edit Post <i class="fas fa-edit right"></i>
                 </button>
