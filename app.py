@@ -106,6 +106,7 @@ def create_post():
             "category_name": request.form.get("category_name"),
             "post_name": request.form.get("post_name"),
             "user_opinion": request.form.get("user_opinion"),
+            "post_source": request.form.get("post_source"),
             "is_sfw": is_sfw,
             "created_by": session["user"]
         }
@@ -119,8 +120,22 @@ def create_post():
 
 @app.route("/edit_post/<post_id>", methods=["GET", "POST"])
 def edit_post(post_id):
+
+    if request.method == "POST":
+        is_sfw = "on" if request.form.get("is_sfw") else "off"
+        submit = {
+            "category_name": request.form.get("category_name"),
+            "post_name": request.form.get("post_name"),
+            "user_opinion": request.form.get("user_opinion"),
+            "post_source": request.form.get("post_source"),
+            "is_sfw": is_sfw,
+            "created_by": session["user"]
+        }
+        mongo.db.posts.update({"_id": ObjectId(post_id)}, submit)
+        flash("Post Successfully Edited")
+        return redirect(url_for("get_posts"))
+
     post = mongo.db.posts.find_one({"_id": ObjectId(post_id)})
-    
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_post.html", post=post, categories=categories)
 
