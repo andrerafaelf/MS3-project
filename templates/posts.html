@@ -1,30 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="center-align">Recent Posts</h3>
+  <h3 class="center-align">Recent Posts</h3>
 
-    <div class="col s12 m7">
-        {% for post in posts %}
-        <h4 class="header center"><u>{{ post.post_name }}</u> {% if post.is_sfw == "off" %}
-            <i class="fas fa-exclamation-triangle tooltipped"
-                data-position="right" data-tooltip="NSFW"></i>
-        {% endif %}  </h4>       
-        <div class="card horizontal">
-          <div class="card-image">
-            <img src="https://www.abola.pt/img/fotos/abola2015/FOTOSAP/INGLATERRA/2018/Dalot4.jpg">
-          </div>
-          <div class="card-stacked">
-            <div class="card-content"> 
-              <p>{{ post.user_opinion }}</p>
+      <div class="col s12 m7">
+          {% for post in posts %}
+          <h4 class="header center"><u>{{ post.post_name }}</u> {% if post.is_sfw == "off" %}
+              <i class="fas fa-exclamation-triangle tooltipped"
+                  data-position="right" data-tooltip="NSFW"></i>
+          {% endif %}  </h4>       
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="https://www.abola.pt/img/fotos/abola2015/FOTOSAP/INGLATERRA/2018/Dalot4.jpg">
             </div>
-            <div class="card-action">
-              <p>Category: {{ post.category_name }}</p> 
-              <a href="{{ post.post_source }}">Source</a>
-              <p><em>by: {{ post.created_by }}</em></p>
+            <div class="card-stacked">
+              <div class="card-content"> 
+                <p>{{ post.user_opinion }}</p>
+              </div>
+              <div class="card-action">
+                <p>Category: {{ post.category_name }}</p> 
+                <a href="{{ post.post_source }}">Source</a>
+                <p><em>by: {{ post.created_by }}</em></p>
+              </div>
             </div>
           </div>
+          {% endfor %}
         </div>
-        {% endfor %}
-      </div>
 
     {% endblock %}
