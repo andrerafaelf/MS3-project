@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
 
-.logo-font {
-    font-family: 'Great Vibes', cursive;
+body {
+    font-family: "Work Sans", sans-serif;
 }
 
 .text-shadow {
@@ -14,4 +14,9 @@
 
 .btn-small {
     margin: 3px;
+}
+
+.logo-font {
+    margin: -10px;
+    left: 30px;
 }
