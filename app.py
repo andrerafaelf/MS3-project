@@ -173,6 +173,13 @@ def delete_category(category_id):
     return redirect(url_for("get_categories"))
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    posts = list(mongo.db.posts.find({"$text": {"$search": query}}))
+    return render_template("posts.html", posts=posts)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
