@@ -3,23 +3,24 @@
 
   <h3 class="center-align">Recent Posts</h3>
 
+
   <div class="row card-panel grey lighten-5">
-        <form action="{{ url_for('search') }}" method="post" class="col s12">
-            <div class="row valign-wrapper center-align">
-                <div class="input-field col s12 m8">
-                    <i class="fas fa-search prefix"></i>
-                    <input type="text" name="query" id="query" minlength="3" class="validate" required>
-                    <label for="query">Search Posts</label>
-                </div>
-                <div class="col s12 m4">
-                  <button type="submit" class="light-blue darken-1 btn text-shadow">
-                    <i class="fas fa-search left"></i> Search
-                  </button>  
-                  <a href="{{ url_for('get_posts') }}" class="red btn text-shadow">Reset</a>
-                </div>
-            </div>
-        </form>
-    </div>
+    <form action="{{ url_for('search') }}" method="post" class="col s12">
+      <div class="row valign-wrapper center-align">
+        <div class="input-field col s12 m8">
+          <i class="fas fa-search prefix"></i>
+          <input type="text" name="query" id="query" minlength="3" class="validate" required>
+          <label for="query">Search Posts</label>
+        </div>
+        <div class="col s12 m4">
+          <button type="submit" class="light-blue darken-1 btn text-shadow">
+            <i class="fas fa-search left"></i> Search
+          </button>
+          <a href="{{ url_for('get_posts') }}" class="red btn text-shadow">Reset</a>
+        </div>
+      </div>
+    </form>
+  </div>
 
       {% if posts|length > 0 %}
       <div class="col s12 m7">
@@ -29,9 +30,36 @@
                   data-position="right" data-tooltip="NSFW"></i>
           {% endif %}  </h4>       
           <div class="card horizontal">
-            <div class="card-image">
-              <img src="https://www.abola.pt/img/fotos/abola2015/FOTOSAP/INGLATERRA/2018/Dalot4.jpg">
-            </div>
+            {% if post.category_name == 'Sports' %}
+              <div class="card-image">
+                <img src="https://i.imgur.com/MhdhIvd.png">
+              </div>
+            {% endif %}
+            {% if post.category_name == 'Meteorology' %}
+              <div class="card-image">
+                <img src="https://i.imgur.com/TGpMy6P.png">
+              </div>
+            {% endif %}
+            {% if post.category_name == 'Science' %}
+              <div class="card-image">
+                <img src="https://i.imgur.com/rdKErSp.png">
+              </div>
+            {% endif %}
+            {% if post.category_name == 'Culture' %}
+              <div class="card-image">
+                <img src="https://i.imgur.com/i3O11vb.jpg">
+              </div>
+            {% endif %}
+            {% if post.category_name == 'Crime' %}
+              <div class="card-image">
+                <img src="https://i.imgur.com/9ReQPbR.jpg">
+              </div>
+            {% endif %}
+            {% if post.category_name == 'Politics' %}
+              <div class="card-image">
+                <img src="https://i.imgur.com/2cXDKEE.jpg">
+              </div>
+            {% endif %}
             <div class="card-stacked">
               <div class="card-content"> 
                 <p>{{ post.user_opinion }}</p>
