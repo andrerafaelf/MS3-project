@@ -5,7 +5,7 @@
 
     <div class="row grey-text text-darken-2">
         <div class="col s12 center-align">
-            <a href="{{ url_for('create_category') }}" class="btn-large grey darken-2 text-shadow">
+            <a href="{{ url_for('create_category') }}" class="custom-btn custom-btn1 btn-large grey darken-2 text-shadow">
                 Add Category <i class="fas fa-plus-square right"></i>
             </a>
         </div>
@@ -20,7 +20,7 @@
                 </div>
                 <div class="card-action">
                     <a href="{{ url_for('delete_category', category_id=category._id) }}"
-                        class="btn-small red accent-4">Delete</a>
+                        class="custom-btn btn-small red accent-4">Delete</a>
                 </div>
             </div>
         </div>

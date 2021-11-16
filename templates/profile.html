@@ -14,7 +14,7 @@
 
     <div class="row center-align">
       <div class="col s12">
-        <a href="{{ url_for('edit_profile', username=session['user']) }}" class="btn-small light-blue lighten-1">Edit Profile</a>
+        <a href="{{ url_for('edit_profile', username=session['user']) }}" class="custom-btn btn-small light-blue lighten-1">Edit Profile</a>
       </div>
     </div>
     
@@ -63,8 +63,8 @@
             <p>Category: {{ post.category_name }}</p>
             <a href="{{ post.post_source }}">Source</a>
             <p><em>by: {{ post.created_by }}</em></p>
-            <a href="{{ url_for('edit_post', post_id=post._id) }}" class="btn-small light-blue lighten-1">Edit</a>
-            <a href="{{ url_for('delete_post', post_id=post._id) }}" class="btn-small red accent-4">Delete</a>
+            <a href="{{ url_for('edit_post', post_id=post._id) }}" class="custom-btn btn-small light-blue lighten-1">Edit</a>
+            <a href="{{ url_for('delete_post', post_id=post._id) }}" class="custom-btn btn-small red accent-4">Delete</a>
           </div>
         </div>
       </div>
