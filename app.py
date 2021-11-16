@@ -24,6 +24,7 @@ def get_posts():
     posts = list(mongo.db.posts.find())
     return render_template("posts.html", posts=posts)
 
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -88,6 +89,44 @@ def profile(username):
         return render_template("profile.html", username=username, posts=posts)
 
     return redirect(url_for("login"))
+
+
+@app.route("/edit_profile/<username>", methods=["GET", "POST"])
+def edit_profile(username):
+    """
+    Allow user to edit their account settings.
+        - Change Password
+        - Delete Account
+    """
+    user = mongo.db.users.find_one_or_404(
+        {"username": session["user"]})
+
+    if session["user"] == username:
+
+        # Update profile function
+        if request.method == "POST":
+
+            mongo.db.users.update_one({'username': session['user']},
+                                      {'$set': {
+                                          'password': generate_password_hash(
+                                              request.form.get("password"))
+                                      }})
+
+            flash("Account Updated! Log back in to confirm changes.".format(
+                    request.form.get("username")))
+            session.pop("user")
+            return render_template("login.html",
+                                   title="Login")
+
+        return render_template("edit_profile.html",
+                               user=user,
+                               title="Edit Account")
+
+    else:
+        # if wrong user
+        flash("You do not have permission to view this page")
+        return redirect(url_for("recipes",
+                                username=session["user"]))
 
 
 @app.route("/logout")
@@ -178,27 +217,6 @@ def search():
     query = request.form.get("query")
     posts = list(mongo.db.posts.find({"$text": {"$search": query}}))
     return render_template("posts.html", posts=posts)
-
-
-def login_required(f):
-    """
-    Login_required decorator adapted from TravelTimN.
-    https://flask.palletsprojects.com/en/2.0.x/patterns/viewdecorators/#login-required-decorator
-    https://github.com/TravelTimN/flask-task-manager-project/blob/demo/app.py
-    """
-
-    @wraps(f)
-    def decorated_function(*args, **kwargs):
-
-        # User NOT logged in
-        if "user" not in session:
-            flash("Please log in to view this page!")
-            return redirect(url_for("login"))
-
-        # User IS logged in
-        return f(*args, **kwargs)
-
-    return decorated_function
 
 
 if __name__ == "__main__":
