@@ -180,6 +180,27 @@ def search():
     return render_template("posts.html", posts=posts)
 
 
+def login_required(f):
+    """
+    Login_required decorator adapted from TravelTimN.
+    https://flask.palletsprojects.com/en/2.0.x/patterns/viewdecorators/#login-required-decorator
+    https://github.com/TravelTimN/flask-task-manager-project/blob/demo/app.py
+    """
+
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+
+        # User NOT logged in
+        if "user" not in session:
+            flash("Please log in to view this page!")
+            return redirect(url_for("login"))
+
+        # User IS logged in
+        return f(*args, **kwargs)
+
+    return decorated_function
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
