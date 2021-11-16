@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="center-align">Manage Categories</h3>
+    <h3 class="center-align grey-text text-darken-2">Manage Categories</h3>
 
-    <div class="row">
+    <div class="row grey-text text-darken-2">
         <div class="col s12 center-align">
-            <a href="{{ url_for('create_category') }}" class="btn-large grey darken-4 text-shadow">
+            <a href="{{ url_for('create_category') }}" class="btn-large grey darken-2 text-shadow">
                 Add Category <i class="fas fa-plus-square right"></i>
             </a>
         </div>
@@ -15,7 +15,7 @@
         {% for category in categories %}
         <div class="col s12 m3">
             <div class="card text-shadow center-align">
-                <div class="card-content black-text">
+                <div class="card-content grey-text text-darken-2">
                     <span class="card-title">{{ category.category_name }}</span>
                 </div>
                 <div class="card-action">
