@@ -29,36 +29,9 @@
           <i class="fas fa-exclamation-triangle tooltipped" data-position="right" data-tooltip="NSFW"></i>
           {% endif %} </h4>
         <div class="card horizontal grey-text text-darken-2">
-          {% if post.category_name == 'Sports' %}
           <div class="card-image">
-            <img src="https://i.imgur.com/MhdhIvd.png">
+            <img src="{{ post.image_url }}">
           </div>
-          {% endif %}
-          {% if post.category_name == 'Meteorology' %}
-          <div class="card-image">
-            <img src="https://i.imgur.com/TGpMy6P.png">
-          </div>
-          {% endif %}
-          {% if post.category_name == 'Science' %}
-          <div class="card-image">
-            <img src="https://i.imgur.com/rdKErSp.png">
-          </div>
-          {% endif %}
-          {% if post.category_name == 'Culture' %}
-          <div class="card-image">
-            <img src="https://i.imgur.com/i3O11vb.jpg">
-          </div>
-          {% endif %}
-          {% if post.category_name == 'Crime' %}
-          <div class="card-image">
-            <img src="https://i.imgur.com/9ReQPbR.jpg">
-          </div>
-          {% endif %}
-          {% if post.category_name == 'Politics' %}
-          <div class="card-image">
-            <img src="https://i.imgur.com/2cXDKEE.jpg">
-          </div>
-          {% endif %}
           <div class="card-stacked">
             <div class="card-content">
               <p>{{ post.user_opinion }}</p>

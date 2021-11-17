@@ -145,6 +145,7 @@ def create_post():
             "category_name": request.form.get("category_name"),
             "post_name": request.form.get("post_name"),
             "user_opinion": request.form.get("user_opinion"),
+            "image_url": request.form.get("image_url"),
             "post_source": request.form.get("post_source"),
             "is_sfw": is_sfw,
             "created_by": session["user"]
@@ -166,6 +167,7 @@ def edit_post(post_id):
             "category_name": request.form.get("category_name"),
             "post_name": request.form.get("post_name"),
             "user_opinion": request.form.get("user_opinion"),
+            "image_url": request.form.get("image_url"),
             "post_source": request.form.get("post_source"),
             "is_sfw": is_sfw,
             "created_by": session["user"]
