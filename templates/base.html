@@ -19,7 +19,7 @@
         <!-- top navbar -->
         <nav class="grey darken-3 nav-extended">
             <div class="nav-wrapper">
-                <a href="{{ url_for('get_posts') }}" class="brand-logo white-text logo-font"><h4>The Online Post</h4></a>
+                <a href="{{ url_for('get_posts') }}" class="brand-logo white-text logo-font left">The Online Post</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger white-text right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_posts') }}" class="white-text">Home</a></li>
@@ -40,17 +40,17 @@
 
         <!-- mobile -->
         <ul class="sidenav" id="mobile-demo">
-            <li><a href="{{ url_for('get_posts') }}" class="white-text">Home</a></li>
+            <li><a href="{{ url_for('get_posts') }}">Home</a></li>
             {% if session.user %}
-                <li><a href="{{ url_for('create_post') }}" class="white-textwhite-text">Create Post</a></li>
+                <li><a href="{{ url_for('create_post') }}">Create Post</a></li>
                 {% if session.user|lower == "admin"|lower %}
-                            <li><a href="{{ url_for('get_categories') }}" class="white-text">Manage Categories</a></li>
+                            <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
                         {% endif %}
-                <li><a href="{{ url_for('logout') }}" class="white-text">Log Out</a></li>
-                <li><a href="{{ url_for('profile', username=session['user']) }}" class="white-text">Profile</a></li>
+                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
             {% else %}
-                <li><a href="{{ url_for('login') }}" class="white-text">Log In</a></li>
-                <li><a href="{{ url_for('register') }}" class="white-text">Register</a></li>
+                <li><a href="{{ url_for('login') }}">Log In</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
             {% endif %}
         </ul>
     </header>

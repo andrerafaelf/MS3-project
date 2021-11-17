@@ -16,11 +16,6 @@ body {
     margin: 3px;
 }
 
-.logo-font {
-    margin: -10px;
-    left: 30px;
-}
-
 .custom-btn:hover {
     border-radius: 50px;
     transition: ease-out 1s;
