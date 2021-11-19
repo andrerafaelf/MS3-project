@@ -185,7 +185,7 @@ def edit_post(post_id):
 def delete_post(post_id):
     mongo.db.posts.remove({"_id": ObjectId(post_id)})
     flash("Post Successfully Deleted")
-    return render_template("profile.html")
+    return redirect(url_for("get_posts"))
 
 
 @app.route("/get_categories")
