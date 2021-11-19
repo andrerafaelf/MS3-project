@@ -1,16 +1,13 @@
 <h1 align="center">Code Institute Website</h1>
 
-[View the live project here.](https://codeinstitute.net)
+[View the live project here.](https://the-online-post-ms3.herokuapp.com/)
 
 This is the main marketing website for Code Institute. It is designed to be responsibe and accessible on a range of devices, making it easy to navigate for potential students and partners.
-
-<h2 align="center"><img src="https://i.ibb.co/TYvTXz1/Example-CI.png"></h2>
 
 ## User Experience (UX)
 
 -   ### User stories
 
-	- Upon opening the website non-registered users will be prompted with a register window.
 	- The user will have 3 different account types:
 		- Viewer:
 			- A Viewer will be the most basic account. They shall be able to view and engage with posts (comment, like or dislike).
@@ -22,18 +19,13 @@ This is the main marketing website for Code Institute. It is designed to be resp
 	- All users will be invited to join a community chat room to further engage with each other. (Discord channel)
 	- All users will be able to select favorite categories to ensure they view what posts interests them most, first.
 	- All users will be able to give back feedback directly to the developer.
-	
-	- Posters will have notifications regarding community feedback on their posts.
-
 
 -   ### Design
     -   #### Colour Scheme
         -   The main colours used are Black, White and Grey. 
     -   #### Typography
-        -   The Montserrat font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Montserrat is a clean font used frequently in programming, so it is both attractive and appropriate.
-    -   #### Imagery
-        -   Imagery is important. The large, background hero image is designed to be striking and catch the user's attention. It also has a modern, energetic aesthetic.
-
+        -   The Works Sans font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly.
+        
 *   ### Wireframes
 
     -   Desktop Wireframe - [View](assets/wireframes/pcWF.png)
@@ -42,6 +34,7 @@ This is the main marketing website for Code Institute. It is designed to be resp
 
     -   Tablet Wireframe - [View](assets/wireframes/tablet.png)
 
+    
 ## Features
 
 -   Responsive on all device sizes
