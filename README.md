@@ -8,24 +8,20 @@ This is the main marketing website for Code Institute. It is designed to be resp
 
 -   ### User stories
 
-	- The user will have 3 different account types:
-		- Viewer:
-			- A Viewer will be the most basic account. They shall be able to view and engage with posts (comment, like or dislike).
-		- Poster: 
-			- Upon reaching certain milestones like 50 likes/dislikes and at least 2 comments on different posts a week, a Viewer shall be able to apply to be a Poster on the forum. In addition to the perks a Viewer has, a Poster will be able to create their own posts, providing a source (to add credibility) and they MUST follow community guidelines. They will be able to delete their OWN posts and can update their OWN posts pending a moderators approval.
-		-Moderator:
-			- After 30 posts with at least 1500 likes a Poster will be invited to join the community as a Forum Moderator, they will be given an admin role within the website and their purpose will be to make sure all posts and consequent comment sections have nothing against community guidelines. They will be in charge of viewing the applications for Poster and Moderator and will also make sure that all post updates are withing community guidelines.
+	- As a first time visitor I want to easily access the account creation page.
+    - I want to be able to view other posts and easily create my own posts.
+    - I want to edit and delete my previous posts. 
+    - There needs to be a search functionality so I can filter through the various posts.
+    - I want to know more about certain milestones.
+    - I want to be able to give feedback to the developer.
 
-	- All users will be invited to join a community chat room to further engage with each other. (Discord channel)
-	- All users will be able to select favorite categories to ensure they view what posts interests them most, first.
-	- All users will be able to give back feedback directly to the developer.
 
 -   ### Design
     -   #### Colour Scheme
         -   The main colours used are Black, White and Grey. 
     -   #### Typography
         -   The Works Sans font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly.
-        
+
 *   ### Wireframes
 
     -   Desktop Wireframe - [View](assets/wireframes/pcWF.png)
@@ -33,6 +29,19 @@ This is the main marketing website for Code Institute. It is designed to be resp
     -   Mobile Wireframe - [View](assets/wireframes/mobile.png)
 
     -   Tablet Wireframe - [View](assets/wireframes/tablet.png)
+
+    -   Tablet Create Wireframe - [View](assets/wireframes/ipadcreate.png)
+
+    -   Tablet Edit Wireframe - [View](assets/wireframes/tabletedit.png)
+
+    -   Mobile Create Wireframe - [View](assets/wireframes/mobilecreate.png)
+
+    -   Mobile Edit Wireframe - [View](assets/wireframes/mobileedit.png)
+
+    -   Desktop Create Wireframe - [View](assets/wireframes/pccreate.png)
+
+    -   Desktop Edit Wireframe - [View](assets/wireframes/pcedit.png)
+
 
     
 ## Features
@@ -47,27 +56,29 @@ This is the main marketing website for Code Institute. It is designed to be resp
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [JS](https://en.wikipedia.org/wiki/JavaScript)
+-   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 ### Frameworks, Libraries & Programs Used
 
-1. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
-    - Bootstrap was used to assist with the responsiveness and styling of the website.
-1. [Hover.css:](https://ianlunn.github.io/Hover/)
-    - Hover.css was used on the Social Media icons in the footer to add the float transition while being hovered over.
+1. [Materialize 1.0.0:](https://materializecss.com/about.html)
+    - Materialize was used to assist with the responsiveness and styling of the website.
+1. [Flask:](https://flask.palletsprojects.com/en/2.0.x/)
+    - Flask was used for all the CRUD fucntionality throughout the website.
 1. [Google Fonts:](https://fonts.google.com/)
     - Google fonts were used to import the 'Titillium Web' font into the style.css file which is used on all pages throughout the project.
 1. [Font Awesome:](https://fontawesome.com/)
     - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
 1. [jQuery:](https://jquery.com/)
-    - jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript.
+    - jQuery was used along side materialize to assist in animation.
 1. [Git](https://git-scm.com/)
     - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 1. [GitHub:](https://github.com/)
     - GitHub is used to store the projects code after being pushed from Git.
-1. [Photoshop:](https://www.adobe.com/ie/products/photoshop.html)
-    - Photoshop was used to create the logo, resizing images and editing photos for the website.
 1. [Balsamiq:](https://balsamiq.com/)
-    - Balsamiq was used to create the [wireframes](https://github.com/) during the design process.
+    - Balsamiq was used to create the [wireframes](https://github.com/andrerafaelf/MS3-project) during the design process.
+1. [MongoDB:](https://www.mongodb.com/)
+    - MongoDB was the selected database for this project.
 
 ## Testing
 
@@ -80,70 +91,35 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 -   #### First Time Visitor Goals
 
-    1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the organisation.
+    - As a first time visitor I want to easily access the account creation page.
+        - This is easily accessed on the main nav bar of the page.
 
-        1. Upon entering the site, users are automatically greeted with a clean and easily readable navigation bar to go to the page of their choice. Underneath there is a Hero Image with Text and a "Learn More" Call to action button.
-        2. The main points are made immediately with the hero image
-        3. The user has two options, click the call to action buttons or scroll down, both of which will lead to the same place, to learn more about the organisation.
+    - I want to be able to view other posts and easily create my own posts.
+        - The main create post page is located on the main page nav bar and all posts can be found on the landing page.
 
-    2. As a First Time Visitor, I want to be able to easily be able to navigate throughout the site to find content.
+    - I want to edit and delete my previous posts. 
+        - After users have created their first post they can easily edit and delete their own posts in their profile page.
 
-        1. The site has been designed to be fluid and never to entrap the user. At the top of each page there is a clean navigation bar, each link describes what the page they will end up at clearly.
-        2. At the bottom of the first 3 pages there is a redirection call to action to ensure the user always has somewhere to go and doesn't feel trapped as they get to the bottom of the page.
-        3. On the Contact Us Page, after a form response is submitted, the page refreshes and the user is brought to the top of the page where the navigation bar is.
+    - There needs to be a search functionality so I can filter through the various posts.
+        - Users can filter through posts with the search functionality on the home page.
 
-    3. As a First Time Visitor, I want to look for testimonials to understand what their users think of them and see if they are trusted. I also want to locate their social media links to see their following on social media to determine how trusted and known they are.
-        1. Once the new visitor has read the About Us and What We Do text, they will notice the Why We are Loved So Much section.
-        2. The user can also scroll to the bottom of any page on the site to locate social media links in the footer.
-        3. At the bottom of the Contact Us page, the user is told underneath the form, that alternatively they can contact the organisation on social media which highlights the links to them.
+    - I want to know more about certain milestones.
+        - Users have the option to apply for page moderator on the page footer, after having reached certain milestones on the website.
 
--   #### Returning Visitor Goals
-
-    1. As a Returning Visitor, I want to find the new programming challenges or hackathons.
-
-        1. These are clearly shown in the banner message.
-        2. They will be directed to a page with another hero image and call to action.
-
-    2. As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have.
-
-        1. The navigation bar clearly highlights the "Contact Us" Page.
-        2. Here they can fill out the form on the page or are told that alternatively they can message the organisation on social media.
-        3. The footer contains links to the organisations Facebook, Twitter and Instagram page as well as the organization's email.
-        4. Whichever link they click, it will be open up in a new tab to ensure the user can easily get back to the website.
-        5. The email button is set up to automatically open up your email app and autofill there email address in the "To" section.
-
-    3. As a Returning Visitor, I want to find the Facebook Group link so that I can join and interact with others in the community.
-        1. The Facebook Page can be found at the footer of every page and will open a new tab for the user and more information can be found on the Facebook page.
-        2. Alternatively, the user can scroll to the bottom of the Home page to find the Facebook Group redirect card and can easily join by clicking the "Join Now!" button which like any external link, will open in a new tab to ensure they can get back to the website easily.
-        3. If the user is on the "Our Favourites" page they will also be greeted with a call to action button to invite the user to the Facebook group. The user is incentivized as they are told there is a weekly favourite product posted in the group.
-
--   #### Frequent User Goals
-
-    1. As a Frequent User, I want to check to see if there are any newly added challenges or hackathons.
-
-        1. The user would already be comfortable with the website layout and can easily click the banner message.
-
-    2. As a Frequent User, I want to check to see if there are any new blog posts.
-
-        1. The user would already be comfortable with the website layout and can easily click the blog link
-
-    3. As a Frequent User, I want to sign up to the Newsletter so that I am emailed any major updates and/or changes to the website or organisation.
-        1. At the bottom of every page their is a footer which content is consistent throughout all pages.
-        2. To the right hand side of the footer the user can see "Subscribe to our Newsletter" and are prompted to Enter their email address.
-        3. There is a "Submit" button to the right hand side of the input field which is located close to the field and can easily be distinguished.
+    - I want to be able to give feedback to the developer.
+        - Any user is more than welcome to give the developer any feedback using the links in the footer.
 
 ### Further Testing
 
 -   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
--   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
+-   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone XS, iPhone 11 & iPhone 12.
 -   A large amount of testing was done to ensure that all pages were linking correctly.
 -   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
 
 ### Known Bugs
 
--   On some mobile devices the Hero Image pushes the size of screen out more than any of the other content on the page.
-    -   A white gap can be seen to the right of the footer and navigation bar as a result.
--   On Microsoft Edge and Internet Explorer Browsers, all links in Navbar are pushed upwards when hovering over them.
+-   On some mobile devices the category selection on the post creation page sometimes isn't accurate.
+    -   Images on mobile devices are sometimes smaller than wanted.
 
 ## Deployment
 
@@ -151,7 +127,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 The project was deployed to GitHub Pages using the following steps...
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/andrerafaelf/MS3-project)
 2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
     - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
 3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
@@ -197,11 +173,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ### Code
 
--   The full-screen hero image code came from this [StackOverflow post](https://stackoverflow.com)
-
--   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
-
--   [MDN Web Docs](https://developer.mozilla.org/) : For Pattern Validation code. Code was modified to better fit my needs and to match an Irish phone number layout to ensure correct validation. Tutorial Found [Here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel#Pattern_validation)
+-   [Materialize](https://materializecss.com/): Materialize used throughout the project mainly to make site responsive using the Materialize Grid System.
 
 ### Content
 
