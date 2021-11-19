@@ -2,7 +2,7 @@
 
 [View the live project here.](https://the-online-post-ms3.herokuapp.com/)
 
-This is the main marketing website for Code Institute. It is designed to be responsibe and accessible on a range of devices, making it easy to navigate for potential students and partners.
+This is the main website for The Online Post. It is designed to be responsibe and accessible on a range of devices, making it easy to navigate for new and existing users.
 
 ## User Experience (UX)
 
